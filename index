@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tricks Game Score Registration</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { 
+            background-color: #121212; 
+            color: #ffffff;
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            height: 100vh;
+            margin: 0;
+        }
+        .container { 
+            max-width: 800px;
+            background-color: #333; 
+            padding: 20px; 
+            border-radius: 8px;
+        }
+        .highlight { 
+            font-weight: bold; 
+            font-size: 24px; 
+            color: #ff5722; 
+            text-align: center; 
+        }
+        img { 
+            max-width: 100%; 
+            height: auto; 
+            border-radius: 8px; 
+            margin-bottom: 20px;
+        }
+        .form-control, .btn { 
+            background-color: #555; 
+            color: #fff; 
+            border: none; 
+            border-radius: 4px;
+        }
+        .btn-primary { 
+            background-color: #1a73e8; 
+        }
+    </style>
+</head>
+<body>
+
+<div class="container text-center">
+    <!-- عنوان الفريق المتقدم -->
+    <h2 class="highlight" id="leadingTeam">Leading Team</h2>
+
+    <div class="row mt-4">
+        <!-- قسم التحليل و الصورة -->
+        <div class="col-md-6">
+            <img src="https://example.com/path/to/cards.jpg" alt="Playing Cards" class="img-fluid">
+            <div id="analysis" class="text-start mt-3">
+                <h5>Results Analysis</h5>
+                <p>Total Score of Abo Amin: <span id="totalAboAmin">0</span></p>
+                <p>Total Score of Abo Toufic: <span id="totalAboToufic">0</span></p>
+                <p>Monthly Analysis:</p>
+                <ul id="monthlyAnalysis"></ul>
+            </div>
+        </div>
+
+        <!-- قسم تسجيل النتائج -->
+        <div class="col-md-6">
+            <form>
+                <div class="mb-3">
+                    <label for="playerName" class="form-label">Player Name:</label>
+                    <select id="playerName" name="playerName" class="form-select">
+                        <option value="Abo Amin">Abo Amin</option>
+                        <option value="Abo Marwan">Abo Marwan</option>
+                        <option value="Abo Karam">Abo Karam</option>
+                        <option value="Abo Toufic">Abo Toufic</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="scoreAboAmin" class="form-label">Abo Amin's Score:</label>
+                    <input type="number" id="scoreAboAmin" name="scoreAboAmin" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label for="scoreAboToufic" class="form-label">Abo Toufic's Score:</label>
+                    <input type="number" id="scoreAboToufic" name="scoreAboToufic" class="form-control">
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">Submit Score</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JavaScript -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
